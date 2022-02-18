@@ -1,5 +1,6 @@
 package co.com.fruiz.sostenibilidad.stepdefinitions;
 
+import co.com.fruiz.sostenibilidad.tasks.AboutUs;
 import co.com.fruiz.sostenibilidad.tasks.OpenUp;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -23,7 +24,7 @@ public class AboutBanistmoStepDefinitions {
 
     @Cuando("^busca el documento el PDF  \"([^\"]*)\" de sostenibilidad$")
     public void buscaElDocumentoElPDFDeSostenibilidad(String arg1) {
-
+        OnStage.theActorInTheSpotlight().attemptsTo(AboutUs.onThePage());
     }
 
     @Entonces("^encuentra y descarga el PDF  \"([^\"]*)\" de sostenibilidad$")
