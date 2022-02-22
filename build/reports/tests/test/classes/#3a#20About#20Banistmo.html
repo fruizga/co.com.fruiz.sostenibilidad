@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">26.248s</div>
+<div class="counter">23.116s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,34 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Buscar el documento requerido"></a>
+<h3 class="failures">Buscar el documento requerido</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected answer
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:301)
+	at co.com.fruiz.sostenibilidad.stepdefinitions.AboutBanistmoStepDefinitions.encuentraYDescargaElPDFDeSostenibilidad(AboutBanistmoStepDefinitions.java:36)
+	at ✽.encuentra y descarga el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcxs&quot; de sostenibilidad(src/test/resources/features/aboutBanistmo.feature:12)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,60 +99,64 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Buscar el documento requerido</td>
-<td class="success">26.248s</td>
-<td class="success">passed</td>
+<td class="failures">Buscar el documento requerido</td>
+<td class="failures">23.116s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@14688b11
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@398a55bc
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6c873ea5
-feb 18, 2022 5:46:55 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7d8934b6
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4272441d
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@21661f80
+feb 21, 2022 6:42:29 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized, goog:chromeOptions: {args: [--start-maximized], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 21822
+Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 21299
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-feb 18, 2022 5:46:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+feb 21, 2022 6:42:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]]
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]]
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1a7e4180
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@e960405
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3f334782
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@2e19dcd9
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7c471550
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5db81f1c
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@68ad3372
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@2778f53
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]], Entonces encuentra y descarga el PDF  &quot;Edición N° 9&quot; de sostenibilidad
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]], Entonces encuentra y descarga el PDF  &quot;Edición N° 9&quot; de sostenibilidad
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]], Entonces encuentra y descarga el PDF  &quot;Edición N° 9&quot; de sostenibilidad]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]], Entonces encuentra y descarga el PDF  &quot;Edición N° 9&quot; de sostenibilidad]
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@18834b95
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3264e4af
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@42d2c31f
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@ee61d30
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6143c6f0
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5320dec
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@487eee49
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@2e745dd8
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9], Faber Switching to new Window]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9], Faber Switching to new Window]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@2247965f
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4af26002
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9], Faber Switching to new Window], Entonces encuentra y descarga el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcxs&quot; de sostenibilidad [Then answer]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9], Faber Switching to new Window], Entonces encuentra y descarga el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcxs&quot; de sostenibilidad [Then answer]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Buscar el documento requerido:Dado que Faber quiere descargar el PDF  &quot;Edición N° 9&quot; de sostenibilidad [Faber open up [Faber opens the Banistmo page]], Cuando busca el documento el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcx&quot; de sostenibilidad [Faber about us [Faber clicks on OpciÃ³n Acerca de nosotros, Faber clicks on OpciÃ³n de informaciÃ³n corporativa, Faber clicks on OpciÃ³n sostenibilidad, Faber clicks on Opcion para mostrar lista de ediciones de boletines, Faber clicks on Icono para descargar PDF de la ediciÃ³n NÂ° 9], Faber Switching to new Window], Entonces encuentra y descarga el PDF  &quot;https://www.banistmo.com/wps/wcm/connect/www.banistmo.com11237/24e1f142-4bb1-4e59-a9d2-b7fcf56061b6/Generaci%C3%B3n+Sostenible+Edici%C3%B3n+9.compressed.pdf?MOD=AJPERES&amp;CVID=lSAKvcxs&quot; de sostenibilidad [Then answer]]
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Buscar el documento requerido
-----------------------------------------------------------------------------
+TEST FAILED: Buscar el documento requerido
+--------------------------------------------------------------------------
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Then answer
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected answerExpected: is &lt;true&gt; but: was &lt;false&gt;
 </pre>
 </span>
 </div>
@@ -143,7 +168,7 @@ TEST PASSED: Buscar el documento requerido
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at 18/02/2022 05:47:22 PM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at 21/02/2022 06:42:53 PM</p>
 </div>
 </div>
 </body>
