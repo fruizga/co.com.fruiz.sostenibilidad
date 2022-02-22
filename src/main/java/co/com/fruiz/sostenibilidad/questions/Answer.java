@@ -2,9 +2,12 @@ package co.com.fruiz.sostenibilidad.questions;
 
 import co.com.fruiz.sostenibilidad.userinterface.ConfirmationPage;
 import co.com.fruiz.sostenibilidad.userinterface.ConfirmationPage;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
+
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getWebdriverManager;
 
 public class Answer implements Question<Boolean> {
     private String question;
@@ -21,9 +24,10 @@ public class Answer implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         boolean result;
-        //String namePDF = Text.of(String.valueOf(confirmationPage)).viewedBy(actor).asString();
-        //String namePDF = confirmationPage;
-        if (question.equals(confirmationPage)){
+        String namePdf;
+        namePdf = Serenity.getWebdriverManager().getCurrentDriver().getCurrentUrl();
+
+        if (question.equals(namePdf)){
             result = true;
         }else {
             result = false;
