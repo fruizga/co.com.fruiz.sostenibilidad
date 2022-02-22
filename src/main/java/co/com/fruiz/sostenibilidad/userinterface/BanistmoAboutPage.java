@@ -16,4 +16,6 @@ public class BanistmoAboutPage extends PageObject {
     public static final Target DOCUMENT_DOWNLOAD = Target.the("Icono para descargar PDF" +
             " de la edición N° 9").located(By.xpath("//*[@id=\"tab5\"]/table/tbody/tr[1]/td[2]/span/a/img"));
 
+
+
 }
