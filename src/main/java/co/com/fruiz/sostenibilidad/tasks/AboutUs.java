@@ -5,14 +5,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.SendKeys;
-import net.serenitybdd.screenplay.waits.Wait;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.Keys;
-
-import java.security.Key;
 
 public class AboutUs implements Task {
     public static AboutUs onThePage() {return Tasks.instrumented(AboutUs.class);}

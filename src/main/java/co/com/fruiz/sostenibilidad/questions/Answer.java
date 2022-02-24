@@ -1,17 +1,14 @@
 package co.com.fruiz.sostenibilidad.questions;
 
-import co.com.fruiz.sostenibilidad.userinterface.ConfirmationPage;
-import co.com.fruiz.sostenibilidad.userinterface.ConfirmationPage;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.Text;
+
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getWebdriverManager;
 
 public class Answer implements Question<Boolean> {
     private String question;
-    private ConfirmationPage confirmationPage;
 
     public  Answer(String question){
         this.question = question;

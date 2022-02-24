@@ -1,7 +1,6 @@
 package co.com.fruiz.sostenibilidad.tasks;
 
 import co.com.fruiz.sostenibilidad.userinterface.BanistmoPage;
-import co.com.fruiz.sostenibilidad.userinterface.BanistmoPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
